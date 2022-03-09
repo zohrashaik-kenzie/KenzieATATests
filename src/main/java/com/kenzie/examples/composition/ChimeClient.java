@@ -26,4 +26,4 @@ public interface ChimeClient {
      **/
     void addMessageToConversation(ChimeUser sender, ChimeUser receiver, String message);
 
-}
+    }
