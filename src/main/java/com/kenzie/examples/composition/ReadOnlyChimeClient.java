@@ -6,7 +6,7 @@ import java.util.List;
  * Read only Chime client interface used to retrieve conversation history
  * between users.
  */
-public class ReadOnlyChimeClient {
+public class ReadOnlyChimeClient  {
     private final ChimeClient client;
 
     public ReadOnlyChimeClient(ChimeClient client) {
