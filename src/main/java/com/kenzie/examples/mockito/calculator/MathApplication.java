@@ -3,6 +3,10 @@ package com.kenzie.examples.mockito.calculator;
 public class MathApplication {
     private CalculatorService calcService;
 
+    public MathApplication(CalculatorService calcService) {
+        this.calcService = calcService;
+    }
+
     public void setCalculatorService(CalculatorService calcService){
         this.calcService = calcService;
     }

@@ -15,13 +15,12 @@ import static org.mockito.Mockito.*;
 public class MathApplicationTester {
     @Mock
     CalculatorService calcService;
-
-    @InjectMocks
     MathApplication mathApplication;
 
     @BeforeEach
     public void setup() {
         MockitoAnnotations.openMocks(this);
+
      }
 
     @Test
@@ -59,7 +58,7 @@ public class MathApplicationTester {
         //add the behavior of calc service to add two numbers
         when(calcService.add(10.0,-1)).thenThrow(IllegalArgumentException.class);
 
-        Assertions.assertThrows(IllegalArgumentException.class,
+        Assertions.assertDoesNotThrow(
                 () -> mathApplication.add(10.0,-1));
     }
 
@@ -77,10 +76,10 @@ public class MathApplicationTester {
         //test the subtract functionality once
 
         //check a minimum 1 call count
-        verify(calcService, atLeastOnce()).subtract(20.0, 10.0);
+        //verify(calcService, atLeastOnce()).subtract(20.0, 10.0);
 
         //check if add function is called minimum 2 times
-        verify(calcService, atLeast(2)).add(10.0, 20.0);
+       // verify(calcService, atLeast(2)).add(10.0, 20.0);
 
         //check if add function is called maximum 3 times
         verify(calcService, atMost(3)).add(10.0,20.0);
