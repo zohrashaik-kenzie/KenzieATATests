@@ -1,0 +1,4 @@
+FROM openjdk:11
+COPY "/Users/zohrashaik/kenzie/test 2/target/classes/com/kenzie/examples/containers/HelloWorld.class" /tmp
+WORKDIR /tmp
+ENTRYPOINT ["java","HelloWorld"]

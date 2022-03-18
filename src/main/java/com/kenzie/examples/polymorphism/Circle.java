@@ -8,6 +8,10 @@ public class Circle implements ShapeInterface, ColorInterface {
         this.radius = radius;
     }
 
+    public Circle() {
+        this.radius = 10;
+    }
+
     @Override
     public void draw() {
 
