@@ -43,7 +43,7 @@ public class AtaCustomerNotFoundException extends AtaUserException {
         return username;
     }
 
-    public static void main(String[] args) throws AtaCustomerNotFoundException {
-        throw new AtaCustomerNotFoundException("badusername", "The customer was not found.");
+    public static void main(String[] args) throws AtaUserException {
+        throw new AtaUserException("badusername",new AtaCustomerNotFoundException("customer not found"));
     }
 }
