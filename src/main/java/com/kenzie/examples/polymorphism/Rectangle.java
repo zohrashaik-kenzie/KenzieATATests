@@ -34,8 +34,7 @@ public class Rectangle extends Shape implements ShapeInterface, ColorInterface
 
     @Override
     public String toString() {
-        System.out.println(super.toString());
-        return "I am a rectangle with width:" + getWidth() + ", heigh:" + getHeight() +
+         return "I am a rectangle with width:" + getWidth() + ", height:" + getHeight() +
                 ", area " + getArea() + ", perimeter: " + perimeter();
     }
 

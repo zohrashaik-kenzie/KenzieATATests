@@ -32,4 +32,9 @@ public class Circle implements ShapeInterface, ColorInterface {
     public void draw(String color) {
         System.out.println("Drawing circle with color:" +color);
     }
+
+    @Override
+    public String toString() {
+        return "I am a circle with radius =" + radius;
+    }
 }
