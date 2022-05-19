@@ -4,7 +4,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 
 public interface IFunctionalInterface{
-    public void execute();
+    public void execute(int x);
 
     public default void print(String text) {
         System.out.println(text);

@@ -9,7 +9,7 @@ public class ConsumerInterface {
     public static void main(String[] args){
         List<String> customerNames = fetchCustomerNames(); // fetchCustomerNames() grabs a list of customers from an API somewhere else
 // The two implementations below are the same - shorthand and longhand
-        customerNames.forEach((name) -> {
+        customerNames.forEach(name -> {
             System.out.println("Customer name: " + name);
         });
 
