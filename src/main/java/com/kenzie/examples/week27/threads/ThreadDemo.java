@@ -5,8 +5,8 @@ public class ThreadDemo {
 
         PrintDemo PD = new PrintDemo();
 
-        NoSyncThread T1 = new NoSyncThread( "Thread - 1 ", PD );
-        NoSyncThread T2 = new NoSyncThread( "Thread - 2 ", PD );
+        SyncThread T1 = new SyncThread( "Thread - 1 ", PD );
+        SyncThread T2 = new SyncThread( "Thread - 2 ", PD );
 
         T1.start();
         T2.start();
