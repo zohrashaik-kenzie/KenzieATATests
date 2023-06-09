@@ -10,17 +10,11 @@ public class ExecuteServiceSubmitDemo {
         ExecutorService executorService = Executors.newSingleThreadExecutor();
 
         Future future = executorService.submit(new Runnable() {
-
             public void run() {
                 System.out.println("Asynchronous task");
-                try {
-                    Thread.sleep(1000);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
             }
         });
 
-        System.out.println(future.get());  //returns null if the task has finished correctly.
+        future.get();  //returns null if the task has finished correctly.
     }
 }

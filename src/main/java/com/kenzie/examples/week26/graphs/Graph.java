@@ -2,7 +2,6 @@ package com.kenzie.examples.week26.graphs;
 
 import java.util.Iterator;
 import java.util.LinkedList;
-import java.util.Queue;
 
 class Graph {
     private int Vertices;   // No. of vertices
@@ -54,7 +53,7 @@ class Graph {
         boolean visited[] = new boolean[Vertices];
 
         // BFS queue
-        Queue<Integer> queue = new LinkedList<Integer>();
+        LinkedList<Integer> queue = new LinkedList<Integer>();
 
         // current node = visited, insert into queue
         visited[root_node]=true;

@@ -26,7 +26,7 @@ public class FibDemo {
             int counter = 0;
 
             // Iterate till counter is N
-            while (counter < n) {
+            while (counter + 2 < n) {
                 System.out.print(num1 + " ");
                 // Swap
                 num3 = num2 + num1;
