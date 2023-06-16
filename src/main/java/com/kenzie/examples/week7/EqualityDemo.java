@@ -1,4 +1,4 @@
-package com.kenzie.examples.week8;
+package com.kenzie.examples.week7;
 
 public class EqualityDemo {
 
