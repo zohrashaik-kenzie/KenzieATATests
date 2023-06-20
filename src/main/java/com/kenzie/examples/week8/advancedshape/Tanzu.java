@@ -1,5 +1,7 @@
 package com.kenzie.examples.week8.advancedshape;
 
+import com.kenzie.examples.week8.IConstants;
+
 public enum Tanzu {
     TAP(IConstants.TAP),
     TKO(IConstants.TKO),

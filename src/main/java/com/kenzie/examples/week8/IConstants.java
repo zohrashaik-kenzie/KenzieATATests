@@ -1,4 +1,4 @@
-package com.kenzie.examples.week8.advancedshape;
+package com.kenzie.examples.week8;
 
 public interface IConstants {
 

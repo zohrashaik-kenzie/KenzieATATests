@@ -1,6 +1,6 @@
 package com.kenzie.examples.week8.advancedshape;
 
-import static com.kenzie.examples.week8.advancedshape.IConstants.PI;
+import static com.kenzie.examples.week8.IConstants.PI;
 
 public class Circle extends AdvancedShape{
 
