@@ -1,4 +1,4 @@
-package com.kenzie.examples.week9.dynamodb;
+package com.kenzie.examples.week9_adv.dynamodb;
 
 import software.amazon.awssdk.core.waiters.WaiterResponse;
 import software.amazon.awssdk.regions.Region;

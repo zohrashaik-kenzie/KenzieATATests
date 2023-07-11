@@ -1,4 +1,4 @@
-package com.kenzie.examples.week10;
+package com.kenzie.examples.week10_term2;
 
     // Class 1
     class DeprecatedTest

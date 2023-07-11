@@ -1,4 +1,4 @@
-package com.kenzie.examples.week9.dns;
+package com.kenzie.examples.week9_adv.dns;
 
 import java.util.ArrayList;
 import java.util.HashMap;

@@ -1,4 +1,4 @@
-package com.kenzie.examples.week10.exceptions;
+package com.kenzie.examples.week10_term2.exceptions;
 
 public class AtaUserException extends AtaBaseException{
     public AtaUserException(String s,Throwable cause) {

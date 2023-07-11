@@ -106,7 +106,9 @@
 							<version>2.16</version>
 						</path>
 					</annotationProcessorPaths>
-				</configuration>
+                    <source>12</source>
+                    <target>12</target>
+                </configuration>
 			</plugin>
 		</plugins>
 	</build>

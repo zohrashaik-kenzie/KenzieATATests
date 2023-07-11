@@ -2,12 +2,11 @@ package com.kenzie.examples.week8;
 
 public interface IConstants {
 
-    static  final double PI = 3.147244;
-    static String TAP = "Tanzu Application Platform";
-    static final String TKO = "Tanzu for Kubernetes Operations";
-    static final String TMC = "Tanzu Mission Control";
-    static final String TO = "Tanzu Observability";
+    double PI = 3.147244;
+    String TAP = "Tanzu Application Platform";
+    String TKO = "Tanzu for Kubernetes Operations";
+    String TMC = "Tanzu Mission Control";
+    String TO = "Tanzu Observability";
 
-
-    public static final int BONUS_PERCENT = 3;
+    int BONUS_PERCENT = 3;
 }

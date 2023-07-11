@@ -1,6 +1,6 @@
 package com.kenzie.examples.week8.advancedshape;
 
-public class Rectangle extends AdvancedShape {
+public class Rectangle extends AdvancedShape implements ShapeInterface{
 
     /**
      * String name;
@@ -15,13 +15,19 @@ public class Rectangle extends AdvancedShape {
 
     }
 
+
     @Override
-    int calculate_area() {
+    public int calculate_area() {
         return measure1 * measure2;
     }
 
     @Override
-    int calculate_perimeter() {
+    public int calculate_perimeter() {
         return 2 * (measure1 + measure2);
+    }
+
+    public String getName() {
+
+        return "Rectangle";
     }
 }

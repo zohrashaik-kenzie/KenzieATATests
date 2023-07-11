@@ -1,4 +1,4 @@
-package com.kenzie.examples.week10.exceptions;
+package com.kenzie.examples.week10_term2.exceptions;
 
 public class AtaCustomerNotFoundException extends AtaUserException {
     private static final long serialVersionUID = 1952705374572855798L;
