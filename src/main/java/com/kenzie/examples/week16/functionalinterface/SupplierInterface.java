@@ -13,7 +13,7 @@ public class SupplierInterface {
        // Find a random number
         Random random = new Random();
       // Get a random number that's within the length of the original list
-        System.out.println(random.nextInt(participants.size()));
+        System.out.println(random.nextInt(10));
         Supplier<Integer>  randomIndexGenerator = () -> random.nextInt(participants.size());
 
         Supplier<Integer> x = () -> 3;

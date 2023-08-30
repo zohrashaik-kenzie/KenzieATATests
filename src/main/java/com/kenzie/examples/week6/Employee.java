@@ -10,6 +10,7 @@ public class Employee {
      String employeeID;
      String designation;
      String department;
+
      Date startDate;
      int vacationDaysAccrued;
     private float salary;
@@ -17,12 +18,20 @@ public class Employee {
     public Employee() {
         vacationDaysAccrued = 0;
         department = "HR";
+
     }
 
     public Employee(String name, String designation, String department) {
         this.name = name;
         this.designation = designation;
         this.department = department;
+    }
+
+    public Employee(String name, String designation, String department, int days) {
+        this.name = name;
+        this.designation = designation;
+        this.department = department;
+        this.vacationDaysAccrued = days;
     }
 
     public Employee(String name, Address employeeAddress, String employeeID, String designation, String department, Date startDate, int vacationDaysAccrued, float salary) {
@@ -107,6 +116,7 @@ public class Employee {
 
          String string = new String();
          String string2 = new String("This is the initial string");
+         Employee employee0 = new Employee();
         Employee employee1 = new Employee("Zohra Shaik","SME","Instruction");
 
         Employee employee2 = new Employee("Kyle Thomas","101", "Facilitator","Instruction");

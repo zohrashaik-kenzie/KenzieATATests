@@ -7,6 +7,7 @@ public class Department {
     Employee departmentManager;
 
     public static void main(String[] args){
-
+     String string = new String();
+        String string2 = new String("Hello world");
     }
 }

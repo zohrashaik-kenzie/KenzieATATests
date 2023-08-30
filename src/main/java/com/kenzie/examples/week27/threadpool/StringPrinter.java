@@ -14,24 +14,10 @@ public class StringPrinter {
 
     public void printString() {
         for (int i = 1; i <= 13; i++) {
-            threadPoolExecutor.execute(getRunnable(i));
+         //   threadPoolExecutor.execute(getRunnable(i));
         }
     }
 
-    private Runnable getRunnable(final int i) {
-        Runnable runnable = new Runnable() {
-            @Override
-            public void run() {
-                try {
-                    String randomString = RandomClass.getRandomString(i);
-                    System.out.println("String returned is :" + randomString);
 
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-            }
-        };
-        return runnable;
-    }
 }
 

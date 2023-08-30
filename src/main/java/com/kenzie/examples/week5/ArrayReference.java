@@ -1,9 +1,9 @@
 package com.kenzie.examples.week5;
 
 
-import com.kenzie.examples.week6.Department;
-import com.kenzie.examples.week6.Employee;
+import org.apache.commons.lang3.ArrayUtils;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 
 public class ArrayReference {
@@ -17,34 +17,36 @@ public class ArrayReference {
 
     public static void main(String[] args){
 
-        Employee employee = new Employee();
-        employee.setEmployeeID("1000");
+        Integer x = 10;
+        //int x = 10;
+        x.compareTo(15);
+        int[] array_one = {1,12,1,-7,3};
+        ArrayList<Integer> arrayList_one = new ArrayList<>();
 
-        Department dept  = new Department();
-
-
-      //  System.out.println(Arrays.equals(array_one,array_two));
-        //Arrays.fill(array_one, 1, 4, 99);
-//        Arrays.sort(array_one);
-//        System.out.println(Arrays.toString(array_one));
-//        array_two = Arrays.copyOf(array_one,10);
+        int[] array_two = {1,2,9,13,0};
+        int[] array_three = {1,12,1,-7,3};
+        System.out.println(Arrays.equals(array_one,array_two));
+        System.out.println(Arrays.equals(array_one,array_three));
+        Arrays.fill(array_one, 1, 3, 99);
+        System.out.println(Arrays.toString(array_one));
+       Arrays.sort(array_one);
+        System.out.println(Arrays.toString(array_one));
+        array_two = Arrays.copyOf(array_one,10);
 //
-//        System.out.println(Arrays.toString(array_two));
-
+        System.out.println(Arrays.toString(array_two));
+//
 //        int len = array_one.length;
-//        int[] new_array = new int[len+1];
+        //int[] new_array = new int[len+1];
 //
 //
-//
-////           array_two = array_one;
-////           array_two[4] = -9;
-//
+ //          array_two = array_one;
+ //          array_two[4] = -9;
+
             int a = 10;
-         //   int[] new_array = ArrayUtils.addAll(array_one,array_two);
-           //System.out.println(Arrays.toString(new_array));
-//           //{10,12,1,-7,3,10}
-//
-//           return;
+            int[] new_array = ArrayUtils.addAll(array_three,array_two);
+           System.out.println(Arrays.toString(new_array));
+           //{10,12,1,-7,3,10}
+
 
     }
 }

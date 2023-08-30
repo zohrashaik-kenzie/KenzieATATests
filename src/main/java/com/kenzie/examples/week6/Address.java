@@ -11,6 +11,9 @@ public class Address {
 
     private static void main(String[] args){
 
+        String string = new String();
+        String string1 = new String("Hello there!");
+        String string2 = new String("Hello hello hello");
 
     }
 }
