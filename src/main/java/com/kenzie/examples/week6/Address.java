@@ -6,7 +6,12 @@ public class Address {
     String address2;
     String city;
     String zip;
-    String country;
+    private String country;
+
+    public void setCountry(String country) {
+        this.country = country;
+    }
+
     String landmark;
 
     private static void main(String[] args){
