@@ -34,10 +34,10 @@ public class EmployeeStream {
     }
 
     public void convertStreamToMap(){
-        Map<String, Integer> tenured = stream
+        Map<String, String> tenured = stream
                 .filter(employee -> employee != null)
-                .collect(Collectors.toMap(Employee::getLastName, Employee::getTenure));
-        for (Map.Entry<String, Integer> entry : tenured.entrySet()) {
+                .collect(Collectors.toMap(Employee::getId, Employee::getName));
+        for (Map.Entry<String, String> entry : tenured.entrySet()) {
             System.out.println(entry.getKey() + ":" + entry.getValue().toString());
         }
 
@@ -46,7 +46,7 @@ public class EmployeeStream {
     public void groupBy() {
         Map<Character, List<Employee>> nameMap = stream
                 .filter(employee -> employee != null)
-                .collect(Collectors.groupingBy(Employee::getFirstNameFirstLetter));
+                .collect(Collectors.groupingBy(Employee::getLastNameFirstLetter));
 
         for (Map.Entry<Character, List<Employee>> entry : nameMap.entrySet()) {
             System.out.println(entry.getKey() + ":");

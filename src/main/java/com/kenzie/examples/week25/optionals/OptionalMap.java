@@ -16,8 +16,8 @@ public class OptionalMap {
         /*----------------------------------------------------------*/
         Function<String, String> function = s -> s.substring(0, 1).length() == 0 ? null : s;
 
-        System.out.println(nonEmptyOptional.map(function)); //Optional["SEBD Advanced ATA Term 4"]
-        System.out.println(nonEmptyOptional.map(String::toLowerCase)); //Optional["lowercase"]
-        System.out.println(emptyOptional.map(function)); //Optional.empty
+        System.out.println(nonEmptyOptional.map(function));
+        System.out.println(nonEmptyOptional.map(String::toLowerCase));
+        System.out.println(emptyOptional.map(function));
     }
 }

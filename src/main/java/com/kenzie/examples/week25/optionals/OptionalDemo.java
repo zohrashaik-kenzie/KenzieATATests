@@ -13,7 +13,9 @@ public class OptionalDemo {
          * it cannot be null - what happens if it is null?
          * how do we avoid that?
          */
-        Optional nonEmptyOptional = Optional.of("SEBD ATA Term 4");
+        String name = getName();
+        Optional nonEmptyOptional = Optional.of(name);
+
         /*
          * Optional.ofNullable("somevalue") returns non empty Optional.
          * If value is null, will get Optional.empty()
@@ -25,5 +27,9 @@ public class OptionalDemo {
         System.out.println(nonEmptyOptional);
         System.out.println(nonEmptyOrEmptyOptional1);
         System.out.println(nonEmptyOrEmptyOptional2);
+    }
+
+    private static String getName() {
+        return null;
     }
 }

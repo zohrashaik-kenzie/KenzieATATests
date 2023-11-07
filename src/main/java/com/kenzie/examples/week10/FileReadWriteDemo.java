@@ -4,9 +4,9 @@ import java.io.*;
 
 public class FileReadWriteDemo {
 
-    public static void main(String[] args) {
-        String inputFile = "src/main/java/com/kenzie/examples/week10/input.txt";
-        String outputFile = "src/main/java/com/kenzie/examples/week10/output.txt";
+    public static void main(String[] args) throws IOException {
+        String inputFile = "input.txt";
+        String outputFile = "output2.txt";
 
         // Read from the file
         try{
@@ -20,16 +20,24 @@ public class FileReadWriteDemo {
             System.out.println("An error occurred while reading the file.");
             e.printStackTrace();
         }
+        finally{
+        }
 
         // Write to the file
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter(outputFile))) {
+        BufferedWriter writer = null;
+        try{
+            writer = new BufferedWriter(new FileWriter(outputFile));
             writer.write("Hello, World!");
             writer.newLine();
             writer.write("This is a sample text.");
             System.out.println("Write to file: Successful");
+
         } catch (IOException e) {
             System.out.println("An error occurred while writing to the file.");
             e.printStackTrace();
+        }
+        finally{
+            writer.close();
         }
     }
 }

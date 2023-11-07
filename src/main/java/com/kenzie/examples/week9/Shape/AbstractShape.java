@@ -7,6 +7,8 @@ public abstract class AbstractShape {
      * @return int
      * takes no parameters
      */
+    int side;
+
     public abstract int calculate_area();
 
     int calculate_perimeter(){

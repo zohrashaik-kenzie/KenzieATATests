@@ -8,58 +8,58 @@ public class SampleStream {
 
     public static void main(String[] args) {
 
-      /**  CreateStream stream = new CreateStream();
-        stream.createStreamFromNumbers();
-        stream.printStream();
+       CreateStream stream = new CreateStream();
+//        stream.createStreamFromNumbers();
+//        stream.printStream();
+//
+//        stream.createStreamFromArray(new Integer[]{1,2,3,4,5,6,7,8,9});
+//        stream.printStream();
+//
+//        List<Integer> list = new ArrayList<Integer>();
+//
+//        for(int i = 10; i< 20; i++){
+//            list.add(i);
+//        }
+//        stream.createStreamFromList(list);
+//        stream.printStream();
+//
+//       stream.createStreamFromGenerate(20);
+//      // stream.printStream();
+//
+//      //  stream.collectToList();
+//        stream.collectToArray();
+//
+//       Employee employee1 = new Employee("100","Zohra","Shaik",3);
+//        Employee employee2 = new Employee("200","Zack", "Orwick", 2);
+//        Employee employee3 = new Employee("300","Chi","Nguyen-Rettig",10);
+//        Employee employee4 = new Employee("400","Ibrahim","Sulayman",1);
+//
+//        List<Employee> employees = new ArrayList<>();
+//        employees.add(employee1);
+//        employees.add(employee2);
+//        employees.add(employee3);
+//        employees.add(employee4);
+//
+//        EmployeeStream eStream = new EmployeeStream(employees);
+//       // eStream.printStream();
+//
+//       // eStream.convertStreamToArray();
+//        //eStream.convertStreamToList();
+//       // eStream.convertStreamToMap();
+//
+//          eStream.groupBy();
 
-        stream.createStreamFromArray(new Integer[]{1,2,3,4,5,6,7,8,9});
-        stream.printStream();
-
-        List<Integer> list = new ArrayList<Integer>();
-
-        for(int i = 1; i< 10; i++){
-            list.add(i);
-        }
-        stream.createStreamFromList(list);
-        stream.printStream();
-
-        stream.createStreamFromGenerate(20);
-       // stream.printStream();
-
-       // stream.collectToList();
-        stream.collectToArray();
-
-        Employee employee1 = new Employee("Zohra","Shaik",3);
-        Employee employee2 = new Employee("Zack", "Orwick", 2);
-        Employee employee3 = new Employee("Chi","Nguyen-Rettig",10);
-        Employee employee4 = new Employee("Ibrahim","Sulayman",1);
-
-        List<Employee> employees = new ArrayList<>();
-        employees.add(employee1);
-        employees.add(employee2);
-        employees.add(employee3);
-        employees.add(employee4);
-
-        EmployeeStream eStream = new EmployeeStream(employees);
-        //eStream.printStream();
-
-        //eStream.convertStreamToArray();
-      //  eStream.convertStreamToList();
-        //eStream.convertStreamToMap();
-
-          //eStream.groupBy();
-       **/
           List<String> names = new ArrayList<>();
           names.add( "Ruby Jane");
           names.add("Zee Jane");
           names.add("Quinn");
           names.add("Joe" );
           names.add ("Joanne");
-        names.add ("Mary Jane");
+          names.add ("Mary Jane");
 
           //intermediate operations
           //filter
-          System.out.println("Fitlered names:");
+          System.out.println("Filtered names:");
           names.stream().filter((s) -> s.startsWith("J"))
                 .forEach(System.out::println);
 
@@ -83,16 +83,15 @@ public class SampleStream {
         matchedResult = names.stream()
                 .noneMatch((s) -> s.startsWith("J"));
 
-        System.out.println(matchedResult);
+        System.out.println(matchedResult); //false
 
         //count
-        System.out.println(matchedResult);     //false
 
         long totalMatched = names.stream()
                 .filter((s) -> s.startsWith("J"))
                 .count();
 
-        System.out.println("Matched Names total: " + totalMatched);
+        System.out.println("Matched Names total: " + totalMatched); //2
 
         //reduce
         Optional<String> reduced = names.stream()
@@ -125,6 +124,6 @@ public class SampleStream {
                     System.out.println(String.format("sorted %s , %s", name1, name2));
                     return name1.compareTo(name2);
                 }).findFirst();
-        System.out.println(firstJane);
+        System.out.println(firstJane);  
     }
 }

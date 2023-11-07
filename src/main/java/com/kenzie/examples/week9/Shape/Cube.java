@@ -16,6 +16,16 @@ public class Cube implements ShapeInterface, NewInterface{
     }
 
     @Override
+    public float calculate_fencing_cost() {
+        return 0;
+    }
+
+    @Override
+    public String printShape() {
+        return null;
+    }
+
+    @Override
     public int calculate_area() {
         return 0;
     }
