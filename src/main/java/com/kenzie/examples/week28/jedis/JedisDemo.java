@@ -11,40 +11,43 @@ public class JedisDemo {
     public static void main(String args[]) {
 //        JedisPool pool = new JedisPool("localhost", 6379);
 //        try (Jedis jedis = pool.getResource()) {
-//            jedis.set("clientName", "Jedis");
-//            String cachedClient = jedis.get("clientName");
+//           // jedis.set("clientName", "Jedis");
+//            String cachedClient = jedis.get("clientNamex");
 //            System.out.println("Cached Client = " + cachedClient);
 //        }
 
 
+//
         JedisPooled jedis = new JedisPooled("localhost", 6379);
         jedis.sadd("planets", "Venus");
         String cachedPlanet = jedis.spop("planets");
         System.out.println("Cached Planet = " + cachedPlanet);
-
-        //lists
+//
+//        //lists
         jedis.lpush("queue#tasks", "firstTask");
         jedis.lpush("queue#tasks", "secondTask");
+        jedis.lpush("queue#tasks", "thirdTask");
+        jedis.lpush("queue#tasks", "firstTask");
 
         String task1 = jedis.rpop("queue#tasks");
         System.out.println("task = " + task1);
-
+//
         String task2 = jedis.rpop("queue#tasks");
         System.out.println("task = " + task2);
-
-
-
-        //sets
+//
+//
+//
+//        //sets
         jedis.sadd("nicknames", "nickname#1");
         jedis.sadd("nicknames", "nickname#2");
         jedis.sadd("nicknames", "nickname#1");
-
+//
         Set<String> nicknames = jedis.smembers("nicknames");
         System.out.println("nicknames = " + nicknames);
-        boolean exists = jedis.sismember("nicknames", "nickname#1");
+        boolean exists = jedis.sismember("nicknames", "nickname#10");
         System.out.println("nickname#1 exists = " + exists);
-
-        //hashes
+//
+//        //hashes
         jedis.hset("user#1", "name", "Jacobus");
         jedis.hset("user#1", "job", "Facilitator");
         jedis.hset("user#1", "term", "4");
@@ -56,8 +59,8 @@ public class JedisDemo {
         System.out.println("job = " + job);
         String term = fields.get("term");
         System.out.println("Term = " + term);
-//term
-        //sorted sets
+////term
+//        //sorted sets
         Map<String, Double> scores = new HashMap<>();
 
         scores.put("PlayerOne", 3000.0);
@@ -67,9 +70,9 @@ public class JedisDemo {
         scores.entrySet().forEach(playerScore -> {
             jedis.zadd("ranking", playerScore.getValue(), playerScore.getKey());
         });
-
+//
         String player = jedis.zrevrange("ranking", 0, 1).iterator().next();
-        long rank = jedis.zrevrank("ranking", "PlayerOne");
+        long rank = jedis.zrevrank("ranking", "PlayerThree");
         System.out.println("Player = " + player);
         System.out.println("Ranking = " + rank);
 

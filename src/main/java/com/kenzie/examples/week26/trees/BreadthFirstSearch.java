@@ -17,6 +17,7 @@ public class BreadthFirstSearch {
             if (current.getData().equals(searchFor)) {
                 return true;
             }
+            System.out.println(current.getData());
             // Add the children
             if(current.getChildren() != null) {
                 queue.addAll(current.getChildren());
@@ -40,8 +41,9 @@ public class BreadthFirstSearch {
 
         TreeNode<String> eigthNode = new TreeNode<>("10", fourthNode);
         TreeNode<String> ninthNode = new TreeNode<>("7", fourthNode);
+        System.out.println(rootNode.toString());
 
-        boolean found = traverseBFS(rootNode, "12");
+        boolean found = traverseBFS(rootNode, "6");
         System.out.println("Found = " + found);
 
     }

@@ -7,6 +7,7 @@ public class Atomicity3 {
     AtomicInteger i;
 
     public void incrementNumber() {
+
         i.getAndIncrement();
     }
 }
