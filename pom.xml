@@ -59,6 +59,21 @@
 			<artifactId>dagger</artifactId>
 			<version>2.16</version>
 		</dependency>
+		<dependency>
+			<groupId>com.google.guava</groupId>
+			<artifactId>guava</artifactId>
+			<version>31.1-jre</version>
+		</dependency>
+		<dependency>
+			<groupId>redis.clients</groupId>
+			<artifactId>jedis</artifactId>
+			<version>4.2.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+			<version>3.5</version>
+		</dependency>
 	</dependencies>
 
 	<dependencyManagement>
@@ -91,7 +106,9 @@
 							<version>2.16</version>
 						</path>
 					</annotationProcessorPaths>
-				</configuration>
+                    <source>12</source>
+                    <target>12</target>
+                </configuration>
 			</plugin>
 		</plugins>
 	</build>

@@ -24,11 +24,5 @@ public class Shape
         return width;
     }
 
-    @Override
-    public String toString() {
-        System.out.println(super.toString());
-        return ("I am a shape");
-
-    }
 
 }
