@@ -19,7 +19,7 @@ public class OptionalFlatMap {
         Function<String, String> function2 = s -> s.substring(0, 4);
 
         System.out.println(optionalContainer.map(optional -> optional.map(function2)));
-        System.out.println(optionalContainer.flatMap(optional -> optional.map(function2)));
+       System.out.println(optionalContainer.flatMap(optional -> optional.map(function2)));
 //
         System.out.println(emptyOptionalContainer.flatMap(optional -> optional.map(function)));
         System.out.println(emptyOptionalContainer.map(optional -> optional.map(function)));

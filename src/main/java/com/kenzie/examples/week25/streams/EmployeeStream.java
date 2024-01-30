@@ -34,6 +34,16 @@ public class EmployeeStream {
     }
 
     public void convertStreamToMap(){
+        Map<String, Integer> tenured = stream
+                .filter(employee -> employee != null)
+                .collect(Collectors.toMap(Employee::getFirstName, Employee::getTenure));
+        for (Map.Entry<String, Integer> entry : tenured.entrySet()) {
+            System.out.println(entry.getKey() + ":" + entry.getValue().toString());
+        }
+
+    }
+
+    public void convertStreamToMap2(){
         Map<String, String> tenured = stream
                 .filter(employee -> employee != null)
                 .collect(Collectors.toMap(Employee::getId, Employee::getName));
@@ -46,7 +56,7 @@ public class EmployeeStream {
     public void groupBy() {
         Map<Character, List<Employee>> nameMap = stream
                 .filter(employee -> employee != null)
-                .collect(Collectors.groupingBy(Employee::getLastNameFirstLetter));
+                .collect(Collectors.groupingBy(e->e.getFirstName().charAt(0)));
 
         for (Map.Entry<Character, List<Employee>> entry : nameMap.entrySet()) {
             System.out.println(entry.getKey() + ":");

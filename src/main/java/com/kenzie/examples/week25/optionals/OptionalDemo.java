@@ -14,8 +14,8 @@ public class OptionalDemo {
          * how do we avoid that?
          */
         String name = getName();
-        Optional nonEmptyOptional = Optional.of(name);
-
+        Optional nonEmptyOptional = Optional.ofNullable(name);
+        System.out.println(nonEmptyOptional);
         /*
          * Optional.ofNullable("somevalue") returns non empty Optional.
          * If value is null, will get Optional.empty()
@@ -23,13 +23,13 @@ public class OptionalDemo {
         Optional nonEmptyOrEmptyOptional1 = Optional.ofNullable("Week 25");
         Optional nonEmptyOrEmptyOptional2 = Optional.ofNullable(null);
 
-        System.out.println(emptyOptional);
-        System.out.println(nonEmptyOptional);
-        System.out.println(nonEmptyOrEmptyOptional1);
-        System.out.println(nonEmptyOrEmptyOptional2);
+//        System.out.println(emptyOptional);
+//        System.out.println(nonEmptyOptional);
+//        System.out.println(nonEmptyOrEmptyOptional1);
+//        System.out.println(nonEmptyOrEmptyOptional2);
     }
 
     private static String getName() {
-        return null;
+        return "Zohra Shaik";
     }
 }

@@ -10,14 +10,14 @@ public class MapVsFlatMap {
         Optional<Integer> intValue = intStr.map(Integer::parseInt);
         System.out.println("intValue = " + intValue);
 
-        //when map method returns a type optional
-        Optional<Optional<Integer>> intValueMap = intStr.map(str -> Optional.of(Integer.parseInt(str)));
+//        //when map method returns a type optional
+        Optional<Optional<Integer>> intValueMap = intStr.map(str -> Optional.of(Integer.parseInt(str))); //Optional[23]
         System.out.println("intValueMap = " + intValueMap);
-
-        //cleaner code using flatmap
+//
+//        //cleaner code using flatmap
         Optional<Integer> intValueFlatMap = intStr.flatMap(str -> Optional.of(Integer.parseInt(str)));
         System.out.println("intValueFlatMap =" + intValueFlatMap);
-
+//
         //All it does here is to flatten out that extra wrapper, we don’t need.
     }
 }

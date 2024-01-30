@@ -9,7 +9,13 @@ public class OptionalIsPresent {
         Optional nonEmptyOptional = Optional.of("SEBD ATA Term 4");
         Optional emptyOptional = Optional.empty();
 
-        System.out.println(emptyOptional.isPresent()); //false
+        System.out.println(emptyOptional.isPresent());  //false
+
+
         System.out.println(nonEmptyOptional.isPresent()); //true
+
+        if(nonEmptyOptional.isPresent()){
+            System.out.println(nonEmptyOptional.get());
+        }
     }
 }

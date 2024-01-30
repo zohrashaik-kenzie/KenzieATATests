@@ -17,6 +17,7 @@ public class OptionalIfPresent {
         nonEmptyOptional.ifPresent(consumer);
        System.out.println("Is it invoked here?");
        emptyOptional.ifPresent(consumer);
+
        nonEmptyOrEmptyOptional2.ifPresent(consumer);
     }
 }
