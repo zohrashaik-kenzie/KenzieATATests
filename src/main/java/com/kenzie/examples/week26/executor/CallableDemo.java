@@ -1,6 +1,5 @@
 package com.kenzie.examples.week26.executor;
 
-import java.io.FileNotFoundException;
 import java.util.concurrent.*;
 
 public class CallableDemo {
@@ -8,8 +7,8 @@ public class CallableDemo {
     static Callable printThread = () -> {
         System.out.println(Thread.currentThread().getName()
                 + ", executing run() method!");
-        throw new FileNotFoundException();
-       // return "All is well!";
+       // throw new FileNotFoundException();
+       return "All is well!";
     };
     public static void main(String[] args) throws ExecutionException, InterruptedException {      // Create the service!
         ExecutorService executor = Executors.newCachedThreadPool();

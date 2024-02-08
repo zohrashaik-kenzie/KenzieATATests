@@ -13,7 +13,6 @@ public class Stateless {
         for (int i = 2; i <= number; i++) {
             f = f.multiply(BigInteger.valueOf(i));
         }
-        Thread.sleep(1000);
         return f;
     }
 
