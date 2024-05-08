@@ -12,7 +12,7 @@ class SyncThread extends Thread {
 
     public void run() {
         synchronized(pDemo) {
-            pDemo.printCount();
+            pDemo.printCount(threadName);
         }
         System.out.println("Thread " +  threadName + " exiting.");
     }

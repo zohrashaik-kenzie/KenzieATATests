@@ -11,7 +11,7 @@ class NoSyncThread extends Thread {
     }
 
     public void run() {
-        PD.printCount();
+        PD.printCount(threadName);
         System.out.println("Thread " +  threadName + " exiting.");
     }
 
