@@ -8,19 +8,22 @@ import java.util.concurrent.TimeUnit;
 
 public class AtomicTest {
 
-    AtomicDouble number;
+    //AtomicDouble number;
+    double number;
 
     public AtomicTest(){
-        number = new AtomicDouble(0);
+        //number = new AtomicDouble(0);
+        number = 0;
     }
 
     public void increase(){
-//        number = number + 1.0;
-        number.addAndGet(1.0);
+        number = number + 1.0;
+//        number.addAndGet(1.0);
     }
 
     public double getNumber(){
-        return number.get();
+        //return number.get();
+        return number;
     }
 
     public static void main(String[] args) {
