@@ -14,7 +14,7 @@ public class GuavaCachingDemo {
             // create builder object
             CacheBuilder<Object, Object> builder = CacheBuilder.newBuilder();
             // create cache loader object
-            CacheLoader<String, Website> loader = new CacheLoader<String, Website>() {
+            CacheLoader<String, Website> loader = new CacheLoader<>() {
                 @Override
                 public Website load(String key) throws Exception {
                     // get data from source
@@ -33,6 +33,7 @@ public class GuavaCachingDemo {
             // fetch a website once again
             System.out.println("Trying to get same data again...");
             w = cache.get("Google");
+            w = cache.get("Amazon");
 
             System.out.println("Website fetched is: " + w.getName());
             System.out.println("Total items in cache: " + cache.size());

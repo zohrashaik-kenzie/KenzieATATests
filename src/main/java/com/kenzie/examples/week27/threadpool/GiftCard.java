@@ -10,7 +10,7 @@ public class GiftCard {
     public void printBalance() {
         System.out.println("Current Balance is: " + balance);
     }
-    public synchronized void addBalance(int addAmount) {
+    public  void addBalance(int addAmount) {
         System.out.println("Balance is " + balance);
         balance =  balance + addAmount;
         dayBalance += addAmount;

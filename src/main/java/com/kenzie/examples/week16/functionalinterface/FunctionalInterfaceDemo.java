@@ -9,10 +9,9 @@ public class FunctionalInterfaceDemo {
         };
 
         lambda.execute(10);
-        lambda.print("This is a test");
-
-        FunctionalInterface fi = new FunctionalInterface();
-
-        fi.execute(20);
+//        lambda.print("This is a test");
+//
+//        FunctionalInterface fi = new FunctionalInterface();
+//        fi.execute(20);
     }
 }

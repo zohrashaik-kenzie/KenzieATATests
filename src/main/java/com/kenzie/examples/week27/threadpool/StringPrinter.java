@@ -5,7 +5,7 @@ import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 
 public class StringPrinter {
-    private final ThreadPoolExecutor threadPoolExecutor = new ThreadPoolExecutor(2, 4, 10,
+    private final ThreadPoolExecutor threadPoolExecutor = new ThreadPoolExecutor(3, 4, 10,
             TimeUnit.MILLISECONDS, new LinkedBlockingQueue<Runnable>());
 
     public static void main(String[] args) {

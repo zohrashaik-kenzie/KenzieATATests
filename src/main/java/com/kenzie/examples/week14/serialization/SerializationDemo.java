@@ -10,12 +10,12 @@ public class SerializationDemo {
         song.setSSN("12342344");
         FileOutputStream fileOut;
         try {
-            fileOut = new FileOutputStream("/tmp/song.ser");
+            fileOut = new FileOutputStream("song.ser");
             ObjectOutputStream out = new ObjectOutputStream(fileOut);
             out.writeObject(song);
             out.close();
             fileOut.close();
-            System.out.printf("Serialized data is saved in /tmp/song.ser");
+            System.out.printf("Serialized data is saved in song.ser");
 
         } catch (IOException e) {
             e.printStackTrace();

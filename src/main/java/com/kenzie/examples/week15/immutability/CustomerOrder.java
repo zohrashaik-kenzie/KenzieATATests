@@ -4,10 +4,12 @@ import java.math.BigDecimal;
 import java.util.Date;
 
 public final class CustomerOrder {
-    private final long customerID;
-    private final String name;
-    private final BigDecimal orderAmount;
-    private final Date orderDate;
+    private   long customerID;
+    private  final String name;
+    private  final BigDecimal orderAmount;
+    private  final Date orderDate;
+
+
     /**
      * Constructor.
      * @param customerID - Customer identifier
@@ -60,6 +62,8 @@ public final class CustomerOrder {
      * @return order cost
      */
     public BigDecimal computeBill(BigDecimal taxRate) {
+        customerID = 20L;
+
         BigDecimal taxRatio = taxRate.add(new BigDecimal("1.0"));
         return orderAmount.multiply(taxRatio);
     }

@@ -5,15 +5,18 @@ public class ThreadSleepDemo extends Thread{
     {
         for(int i=1;i<5;i++)
         {
-            try
-            {
-                Thread.sleep(500);
-            }catch(InterruptedException e){System.out.println(e);}
+            System.out.println(getName());
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
             System.out.println(i);
         }
     }
     public static void main(String args[])
     {
+
         ThreadSleepDemo thread1=new ThreadSleepDemo();
         ThreadSleepDemo thread2=new ThreadSleepDemo();
         thread1.start();

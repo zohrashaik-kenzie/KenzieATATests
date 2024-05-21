@@ -12,7 +12,7 @@ class QueueImplementation
         cap = n;
         front = 0;
         rear = -1;
-        n = 0;
+        n1 = 0;
     }
 
     // dequeue function for removing the front element

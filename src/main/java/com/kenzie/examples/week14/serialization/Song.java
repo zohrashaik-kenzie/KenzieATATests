@@ -1,12 +1,10 @@
 package com.kenzie.examples.week14.serialization;
 
 
-import java.beans.Transient;
 import java.io.Serializable;
 
 public class Song implements Serializable {
 
-    @Transient
     public void setSSN(String SSN) {
         this.SSN = SSN;
     }
@@ -16,6 +14,7 @@ public class Song implements Serializable {
     private String songTitle;
     private String albumTitle;
     private int awards;
+    //private transient int x;
 
     public Song() {
     }
@@ -25,6 +24,14 @@ public class Song implements Serializable {
         this.songTitle = songTitle;
         this.albumTitle = albumTitle;
         this.awards = awards;
+    }
+
+    public Song(String SSN, String artist, String songTitle, String albumTitle, int awards) {
+        this.artist = artist;
+        this.songTitle = songTitle;
+        this.albumTitle = albumTitle;
+        this.awards = awards;
+        this.SSN = SSN;
     }
 
 

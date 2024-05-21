@@ -3,26 +3,16 @@ package com.kenzie.examples.week16.functionalinterface;
 import com.google.common.collect.ImmutableList;
 
 import java.util.List;
-import java.util.Random;
 import java.util.function.Supplier;
 
 public class SupplierInterface {
     public static void main(String[] args){
         // The list we're working with
-        List<String> participants = ImmutableList.of("Ana", "Mary", "Carlos");
+        List<String> participants = ImmutableList.of("Person0", "Person1", "Person2","Person3","Person4","Person5","Person6");
        // Find a random number
-        Random random = new Random();
-      // Get a random number that's within the length of the original list
-        System.out.println(random.nextInt(10));
-        Supplier<Integer>  randomIndexGenerator = () -> random.nextInt(participants.size());
-
-        Supplier<Integer> x = () -> 3;
-
         SupplierImpl si = new SupplierImpl();
-        Integer randomIndexGenerator2 = si.get();
-
         // The call that takes our supplier
-        callOnParticipants(() -> random.nextInt(participants.size()),participants);
+        callOnParticipants(() -> si.get(),participants);
     }
 
 

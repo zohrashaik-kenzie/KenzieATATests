@@ -15,27 +15,27 @@ public class StackDemo {
         System.out.println("Stack => " + stackOfCards);
         System.out.println();
 
-        // Popping items from the Stack
-        String cardAtTop = stackOfCards.pop();  // Throws EmptyStackException if the stack is empty
-        System.out.println("Stack.pop() => " + cardAtTop);
-        System.out.println("Current Stack => " + stackOfCards);
-        System.out.println();
-
-        // Get the item at the top of the stack without removing it
+//        // Popping items from the Stack
+          String cardAtTop = stackOfCards.pop();  // Throws EmptyStackException if the stack is empty
+          System.out.println("Stack.pop() => " + cardAtTop);
+          System.out.println("Current Stack => " + stackOfCards);
+          System.out.println();
+//
+//        // Get the item at the top of the stack without removing it
         cardAtTop = stackOfCards.peek();
         System.out.println("Stack.peek() => " + cardAtTop);
         System.out.println("Current Stack => " + stackOfCards);
-
-
+//
+//
         // Check if the Stack is empty
         System.out.println("Is Stack empty? : " + stackOfCards.isEmpty());
-
+//
         // Find the size of Stack
         System.out.println("Size of Stack : " + stackOfCards.size());
-
-        // Search for an element
-        // The search() method returns the 1-based position of the element from the top of the stack
-        // It returns -1 if the element was not found in the stack
+//
+//        // Search for an element
+//        // The search() method returns the 1-based position of the element from the top of the stack
+//        // It returns -1 if the element was not found in the stack
         int position = stackOfCards.search("Queen");
 
         if(position != -1) {

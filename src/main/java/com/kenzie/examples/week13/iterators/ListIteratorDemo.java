@@ -20,29 +20,30 @@ public class ListIteratorDemo {
 //            System.out.println(i.toString());
 //        }
 
-        //set the first element to Hexagon
+//        //set the first element to Hexagon
         iterator.add(new Hexagon());
-
-        iterator = shapeList.listIterator();
-
-        while (iterator.hasNext() && iterator.next() != null)
-        {
-        }
         iterator.add(new Rectangle(50,100));
-
-        iterator = shapeList.listIterator();
-
-        //update the second element with a Square of side 70
-        iterator.next();
-        iterator.next();
-        iterator.set(new Square(70));
-
         iterator = shapeList.listIterator();
 //        while (iterator.hasNext())
 //        {
 //            ShapeInterface i = iterator.next();
 //            System.out.println(i.toString());
 //        }
+
+//
+        iterator = shapeList.listIterator();
+//
+//        //update the second element with a Square of side 70
+        iterator.next();
+        iterator.next();
+        iterator.add(new Square(70));
+//
+        iterator = shapeList.listIterator();
+//       while (iterator.hasNext())
+//        {
+//           ShapeInterface i = iterator.next();
+//            System.out.println(i.toString());
+//       }
         //add a circle with radius 25 at index 3
         //remove the first element from the list
         iterator.next();
@@ -63,9 +64,15 @@ public class ListIteratorDemo {
             if(i instanceof Hexagon)
                 iterator.remove();
         }
-
-
-
+//
+        iterator = shapeList.listIterator();
+        while (iterator.hasNext())
+        {
+            ShapeInterface i = iterator.next();
+            System.out.println(i.toString());
+        }
+//
+//
         iterator = shapeList.listIterator();
         while (iterator.hasNext())
         {
@@ -79,10 +86,10 @@ public class ListIteratorDemo {
             ShapeInterface i = iterator.next();
             System.out.println(i.toString());
         }
-
-
-        //remove all items from the list
-
-    }
+//
+//
+//        //remove all items from the list
+//
+   }
 }
 

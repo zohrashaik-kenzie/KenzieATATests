@@ -18,9 +18,11 @@ public class PriceEvaluator implements Function<BigDecimal, String> {
 
 
     public static void main(String[] args){
-        //PriceEvaluator priceEvaluator = new PriceEvaluator();
-        //String response = priceEvaluator.apply(new BigDecimal(5));
-        // We don't declare a type on price. We get juicy type inference for free
+//        PriceEvaluator priceEvaluator = new PriceEvaluator();
+//        String response = priceEvaluator.apply(new BigDecimal(50));
+//        System.out.println(response);
+
+     //    We don't declare a type on price. We get juicy type inference for free
         Function<BigDecimal, String> priceEvaluator = price -> {
             if (price.compareTo(new BigDecimal(50)) == -1) {
                 return "That's a great price!";
@@ -30,6 +32,7 @@ public class PriceEvaluator implements Function<BigDecimal, String> {
                 return "That's too expensive!";
             }
         };
-       String response = priceEvaluator.apply(new BigDecimal(5));
+        String response = priceEvaluator.apply(new BigDecimal(100));
+        System.out.println(response);
     }
 }

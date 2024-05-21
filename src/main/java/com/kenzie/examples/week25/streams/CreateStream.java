@@ -35,7 +35,7 @@ public class CreateStream {
     }
 
     public void collectToList(){
-         List<Integer> evenNumbersList = stream.filter(i -> i%2 == 1)
+         List<Integer> evenNumbersList = stream.filter(i -> i%2 == 0)
                 .collect(Collectors.toList());
         System.out.print(evenNumbersList);
     }

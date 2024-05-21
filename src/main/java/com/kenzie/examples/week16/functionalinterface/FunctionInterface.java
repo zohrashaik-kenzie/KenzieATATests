@@ -18,6 +18,16 @@ public class FunctionInterface {
                 return "That's too expensive!";
             }
         };
+
+        Function<BigDecimal, String> nopriceEvaluator = price -> {
+            if (price.compareTo(new BigDecimal(50)) == -1) {
+                return "That's not a great price!";
+            } else if (price.compareTo(new BigDecimal(100)) == -1) {
+                return "That's not a fair price.";
+            } else {
+                return "That's not too expensive!";
+            }
+        };
         // A data structure we got somewhere else
         // Maps BigDecimal prices of items to a `String` such as "That's a great price!"
         // Data looks like this -
@@ -28,10 +38,12 @@ public class FunctionInterface {
         // This is the price we're looking for in our map
         BigDecimal itemPrice = new BigDecimal("49.99");
         BigDecimal itemPrice2 = new BigDecimal("104.99");
+        BigDecimal itemPrice3 = null;
         // computeIfAbsent tries to find the itemPrice in the map
         // If the value doesn't exist in the map, it will run the function on that price, and insert the result into the map
         priceMap.computeIfAbsent(itemPrice, priceEvaluator);
         priceMap.computeIfAbsent(itemPrice2, priceEvaluator);
+        //priceMap.computeIfAbsent(itemPrice2, nopriceEvaluator);
         System.out.println(priceMap);
     }
 

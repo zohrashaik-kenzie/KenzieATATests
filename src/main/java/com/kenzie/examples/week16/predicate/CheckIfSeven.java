@@ -7,7 +7,7 @@ import java.util.function.Predicate;
 public class CheckIfSeven implements Predicate<Integer> {
     @Override
     public boolean test(Integer integer) {
-      return integer == 7;
+      return integer%5 == 0;
     }
 
     public static void main(String[] args){

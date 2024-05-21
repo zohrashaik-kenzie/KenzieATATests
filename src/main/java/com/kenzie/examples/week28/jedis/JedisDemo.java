@@ -1,5 +1,7 @@
 package com.kenzie.examples.week28.jedis;
 
+import redis.clients.jedis.Jedis;
+import redis.clients.jedis.JedisPool;
 import redis.clients.jedis.JedisPooled;
 
 import java.util.HashMap;
@@ -9,12 +11,12 @@ import java.util.Set;
 public class JedisDemo {
 
     public static void main(String args[]) {
-//        JedisPool pool = new JedisPool("localhost", 6379);
-//        try (Jedis jedis = pool.getResource()) {
-//           // jedis.set("clientName", "Jedis");
-//            String cachedClient = jedis.get("clientNamex");
-//            System.out.println("Cached Client = " + cachedClient);
-//        }
+        JedisPool pool = new JedisPool("localhost", 6379);
+        try (Jedis jedis = pool.getResource()) {
+           // jedis.set("clientName", "Jedis");
+            String cachedClient = jedis.get("clientNamex");
+            System.out.println("Cached Client = " + cachedClient);
+        }
 
 
 //

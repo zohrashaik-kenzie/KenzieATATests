@@ -7,6 +7,8 @@ public class SupplierImpl implements Supplier<Integer> {
     @Override
     public Integer get() {
         Random random = new Random();
-        return new Integer(random.nextInt(2));
+        int retInt = Integer.valueOf(random.nextInt(9));
+        System.out.println(retInt);
+        return retInt;
     }
 }

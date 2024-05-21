@@ -36,7 +36,7 @@ public class EmployeeStream {
     public void convertStreamToMap(){
         Map<String, Integer> tenured = stream
                 .filter(employee -> employee != null)
-                .collect(Collectors.toMap(Employee::getFirstName, Employee::getTenure));
+                .collect(Collectors.toMap(Employee::getLastName, Employee::getTenure));
         for (Map.Entry<String, Integer> entry : tenured.entrySet()) {
             System.out.println(entry.getKey() + ":" + entry.getValue().toString());
         }
