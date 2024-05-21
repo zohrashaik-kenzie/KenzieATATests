@@ -10,7 +10,7 @@ public class Stateful {
 
         Set<Integer> seen = new HashSet<>();
 
-        IntStream stream = IntStream.of(1, 2, 3, 1, 2, 3);
+        IntStream stream = IntStream.of(1, 2, 3, 3, 3, 3, 1, 2, 3, 2, 3, 1);
 
 // Stateful lambda expression
 

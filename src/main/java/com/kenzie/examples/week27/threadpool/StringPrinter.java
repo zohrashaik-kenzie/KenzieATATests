@@ -5,17 +5,24 @@ import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 
 public class StringPrinter {
-    private final ThreadPoolExecutor threadPoolExecutor = new ThreadPoolExecutor(3, 4, 10,
+
+    private final ThreadPoolExecutor threadPoolExecutor = new ThreadPoolExecutor(2, 3, 0,
             TimeUnit.MILLISECONDS, new LinkedBlockingQueue<Runnable>());
 
     public static void main(String[] args) {
-        new StringPrinter().printString();
+        StringPrinter printer = new StringPrinter();
+        printer.printString();
+        printer.shutdown();
     }
 
     public void printString() {
         for (int i = 1; i <= 13; i++) {
             threadPoolExecutor.execute(getRunnable(i));
         }
+        threadPoolExecutor.shutdown();
+    }
+
+    public void shutdown(){
         threadPoolExecutor.shutdown();
     }
 
